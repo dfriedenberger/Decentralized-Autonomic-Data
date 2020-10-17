@@ -13,10 +13,11 @@ async function run()
     let dad = {
         id : did,
         changed : new Date(),
-        data: 
-        {
-            "name": "Dirk Friedenberger",
-            "nation": "Germany"
+        geometry : {
+            coordinates : {
+                latitude : 52.520008,
+                longitude: 13.404954
+            }
         }
     };
 

@@ -6,26 +6,33 @@ There are a few implementations of the ideas described in the paper [“Decentra
 Example 1: Minimal DAD
 ======================
 
+This example shows how to create and verify a simple DADi.
+
 Requirements 
 ------------
 
+* node
 * [didery.js](https://github.com/reputage/didery.js)
 
-Manual
+Script
 ------
 ```
-$ node create-did/didery.js
-did:  did:dad:nZnruUJH4A4wmOIcpO97SsiYdEjtT5VoBKUzV8RQpBA=
+$ node create-did/createDADi.js
+--
 {
-  "id": "did:dad:nZnruUJH4A4wmOIcpO97SsiYdEjtT5VoBKUzV8RQpBA=",
-  "changed": "2020-10-16T20:52:44.112Z",
-  "data": {
-    "name": "Dirk Friedenberger",
-    "nation": "Germany"
+  "id": "did:dad:Yemu1RtlH0k2q2IveyQSzdfQGK5bEk4UsH1Q12qwubQ=",
+  "changed": "2020-10-17T12:54:21.010Z",
+  "geometry": {
+    "coordinates": {
+      "latitude": 52.520008,
+      "longitude": 13.404954
+    }
   }
 }
 
-CkoeiSoPG1wgP3_jebhGaDpdr2BXOYCcQ4tBJouqyYjQdB581Wv7UnWvuwxey1OukQX49Z_OgRir0aQ-PP9VDg==
-signature = true
+HbihAhmA44HDY1DanHEvs2SIIWV8MQPhcCroEGBPSO_VuUk5bsFS_GXf0ze8TEbySN1P4EuVtSRz3WqEYyPRDA==
+--
+signature:  true
 ```
+
 
