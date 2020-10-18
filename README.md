@@ -54,15 +54,15 @@ Requirements
 ```
 $ node create-did/createDDID.js
 -- Public Key --
-03f3fc318790a5ea13d6c0801420126aa7319748f0e3e00d01fe5777ed6ea7412b
+02bb20f89f1db2a0824e84ed912d6a0f3d94530e7cbd4a90d250ee52d22a66b5ab
 -- DDID Database --
 {
-  "did:dad:A_P8MYeQpeoT1sCAFCASaqcxl0jw4-ANAf5Xd-1up0Er?chain=0/1": "did:dad:Al_OruFr4r9o3ouj4pEqzsC_dKgSOrlc_97k97viLxbc"
+  "did:dad:A2Mag8a_qz0SDTFhhkOp2HCie3ZDnc3Gysv9ce7NZB3t": "did:dad:Arsg-J8dsqCCToTtkS1qDz2UUw58vUqQ0lDuUtIqZrWr?chain=0/1"
 }
 -- DAD Item --
 {
-  "id": "did:dad:Al_OruFr4r9o3ouj4pEqzsC_dKgSOrlc_97k97viLxbc",
-  "changed": "2020-10-18T13:56:35.537Z",
+  "id": "did:dad:A2Mag8a_qz0SDTFhhkOp2HCie3ZDnc3Gysv9ce7NZB3t",
+  "changed": "2020-10-18T14:07:45.219Z",
   "geometry": {
     "coordinate": {
       "latitude": 49.981,
@@ -71,7 +71,7 @@ $ node create-did/createDDID.js
   }
 }
 
-MEYCIQDYZiHCpx24PiWBt7mc6d-OVRPQC3eTbctKZCcx_VKiVgIhALpFwL12u-HTeRzB1B7kJuVMsmy5OMALpsSExR6tMpyu
+MEYCIQDHnXk3zmNg0pdnO30g_LJCY1DLZwbUkl4n42jWI5SWkQIhAI0MyG1sm6u_jM_117dyzoF8t1OhvbqWxJt4KhO3LYrV
 --
 signature:  true
 ```

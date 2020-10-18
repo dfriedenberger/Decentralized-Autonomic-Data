@@ -25,7 +25,7 @@ async function run()
         publicKey: derived.publicKey
     });
     var database = {};
-    database[did+"?chain="+derivedPath] = ddid;
+    database[ddid] = did+"?chain="+derivedPath;
     console.log("-- DDID Database --");
     console.log(JSON.stringify(database, null, 2));
 
