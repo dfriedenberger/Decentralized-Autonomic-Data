@@ -39,7 +39,7 @@ signature:  true
 Example 2: derived DID (DDID)
 ======================
 
-This example shows how to create DADi with DDID and verify it.
+This example shows how to create DADi with DDID (chain + sequenz number) and verify it.
 
 Requirements 
 ------------
@@ -54,15 +54,15 @@ Requirements
 ```
 $ node create-did/createDDID.js
 -- Public Key --
-02bb20f89f1db2a0824e84ed912d6a0f3d94530e7cbd4a90d250ee52d22a66b5ab
+02a47fce2176ef1e89dd81aca6cef6c070aa51d280846f4c2168e7635b546c16a9
 -- DDID Database --
 {
-  "did:dad:A2Mag8a_qz0SDTFhhkOp2HCie3ZDnc3Gysv9ce7NZB3t": "did:dad:Arsg-J8dsqCCToTtkS1qDz2UUw58vUqQ0lDuUtIqZrWr?chain=0/1"
+  "did:dad:AzNO6h9uaTRPk0pk-7A60cEGKAE8al8bcLUoOuDHoxFK": "did:dad:AqR_ziF27x6J3YGsps72wHCqUdKAhG9MIWjnY1tUbBap?chain=0/1"
 }
 -- DAD Item --
 {
-  "id": "did:dad:A2Mag8a_qz0SDTFhhkOp2HCie3ZDnc3Gysv9ce7NZB3t",
-  "changed": "2020-10-18T14:07:45.219Z",
+  "id": "did:dad:AzNO6h9uaTRPk0pk-7A60cEGKAE8al8bcLUoOuDHoxFK/1603032687",
+  "changed": "2020-10-18T14:51:27.758Z",
   "geometry": {
     "coordinate": {
       "latitude": 49.981,
@@ -71,7 +71,7 @@ $ node create-did/createDDID.js
   }
 }
 
-MEYCIQDHnXk3zmNg0pdnO30g_LJCY1DLZwbUkl4n42jWI5SWkQIhAI0MyG1sm6u_jM_117dyzoF8t1OhvbqWxJt4KhO3LYrV
+MEUCIFLHLEmOtVKRLghVk3GdSbkN0G5b0PSTNRu4T9ksJ0cgAiEA-_Cp3pMjl91GF_Y2hLW9-XMewMYCF7SK5zdEignKNng=
 --
 signature:  true
 ```

@@ -11,28 +11,36 @@ async function run()
     let seed = crypto.randomBytes(128);
     let hdkey = HDKey.fromMasterSeed(seed);
     let derivedPath = "0/1"
-    let derived = hdkey.derive("m/"+derivedPath);
+    let derivedBase = hdkey.derive("m/"+derivedPath);
 
     console.log("-- Public Key --");
     console.log(hdkey.publicKey.toString("hex"));
 
     // derived DID database 
     let did = await didery.makeDid(hdkey.publicKey); //from public key
-    let ddid = await didery.makeDid(derived.publicKey); //from public key
-    let pems = ecKeyUtils.generatePem({
-        curveName,
-        privateKey: derived.privateKey,
-        publicKey: derived.publicKey
-    });
+    let ddid = await didery.makeDid(derivedBase.publicKey); //from public key
+   
     var database = {};
     database[ddid] = did+"?chain="+derivedPath;
     console.log("-- DDID Database --");
     console.log(JSON.stringify(database, null, 2));
 
 
+    //Sequenznumber
+    let sequenznumber = Math.floor(new Date().getTime() / 1000);
+    let derived = derivedBase.deriveChild(sequenznumber);
+
+
+    let pems = ecKeyUtils.generatePem({
+        curveName,
+        privateKey: derived.privateKey,
+        publicKey: derived.publicKey
+    });
+
+
     //DAD Item
     let dad = {
-        id : ddid,
+        id : ddid+"/"+sequenznumber,
         changed : new Date(),
         geometry : {
             coordinate : {
@@ -58,7 +66,7 @@ async function run()
     
     //verify - Use only extended public key and derived path
     let publicRoot = HDKey.fromExtendedKey(hdkey.publicExtendedKey);
-    let publicDerived = publicRoot.derive("m/"+derivedPath);
+    let publicDerived = publicRoot.derive("m/"+derivedPath+"/"+sequenznumber);
     let publicPems = ecKeyUtils.generatePem({
         curveName,
         publicKey: publicDerived.publicKey
