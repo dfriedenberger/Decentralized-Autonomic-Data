@@ -75,3 +75,45 @@ MEUCIFLHLEmOtVKRLghVk3GdSbkN0G5b0PSTNRu4T9ksJ0cgAiEA-_Cp3pMjl91GF_Y2hLW9-XMewMYC
 --
 signature:  true
 ```
+Example 3: Chaining DADs
+======================
+
+This example shows how to create DAD referencing to prior DAD.
+
+Requirements 
+------------
+
+* node
+* [didery.js](https://github.com/reputage/didery.js)
+
+[Script](create-did/createDADChain.js)
+------
+```
+$ node create-did/createDADChain.js
+-- Public Key --
+081fc1c634526b3d3e1650a9522bd82d387132c4f0ce65f4b818df2fd8d3a129
+-- DAD Item --
+{
+  "id": "did:dad:CB_BxjRSaz0-FlCpUivYLThxMsTwzmX0uBjfL9jToSk=",
+  "changed": "2020-10-18T18:24:50.147Z",
+  "address": {
+    "licence": "Data (c) OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "address": {
+      "village": "Waldaschaff",
+      "county": "Landkreis Aschaffenburg",
+      "state": "Bayern",
+      "postcode": "63857",
+      "country": "Germany",
+      "country_code": "de"
+    }
+  },
+  "prior": {
+    "id": "did:dad:AzNO6h9uaTRPk0pk-7A60cEGKAE8al8bcLUoOuDHoxFK/1603032687",
+    "sig": "MEUCIFLHLEmOtVKRLghVk3GdSbkN0G5b0PSTNRu4T9ksJ0cgAiEA-_Cp3pMjl91GF_Y2hLW9-XMewMYCF7SK5zdEignKNng="
+  }
+}
+
+GDgiYzJunOFpD8cQIiI3n_qG9UxL0orp1s2_anW9FwUCmADoNIORDxZnt3Xz8d7JUuQg9aPCHOtuzo1X3TkSBg==
+--
+signature:  true
+```
