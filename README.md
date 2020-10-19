@@ -76,7 +76,7 @@ MEUCIFLHLEmOtVKRLghVk3GdSbkN0G5b0PSTNRu4T9ksJ0cgAiEA-_Cp3pMjl91GF_Y2hLW9-XMewMYC
 signature:  true
 ```
 Example 3: Chaining DADs
-======================
+========================
 
 This example shows how to create DAD referencing to prior DAD.
 
@@ -116,4 +116,40 @@ $ node create-did/createDADChain.js
 GDgiYzJunOFpD8cQIiI3n_qG9UxL0orp1s2_anW9FwUCmADoNIORDxZnt3Xz8d7JUuQg9aPCHOtuzo1X3TkSBg==
 --
 signature:  true
+```
+Example 4: Encrypting Data
+==========================
+
+This example shows how to encrypt data with keys from DADi and recipient.
+
+Requirements 
+------------
+
+* node
+* [didery.js](https://github.com/reputage/didery.js)
+* [hdkey](https://github.com/cryptocoinjs/hdkey)
+* [eckey-utils](https://github.com/tibetty/eckey-utils)
+
+[Script](create-did/encryptData.js)
+------
+```
+-- DAD Item --
+{
+  "id": "did:dad:Aj10lFn3QUQBTzht3yjdU5wP30GEXHK28fKSPCK8jolo",
+  "changed": "2020-10-19T07:03:02.367Z",
+  "payload": [
+    {
+      "file": "message.txt.enc",
+      "content-type": "text/plain",
+      "iv": "48a4531ec6e3d3fcfa7c90b1b1557b64",
+      "sha256": "3376c89a19c3b1b38bcdc58587a62e1e6401c119f053d75d855c28edca652afc"
+    }
+  ]
+}
+
+MEYCIQDEo_WFBnEhUWYlOuKIiE1lqsjrzQ5kgtgDK-mq-rWkbwIhAP6EEnnQTdj9eYRAlsHakPjMACuQpxrYDpgH8MJezlsG
+--
+message.txt      d2a84f4b8b650937ec8f73cd8be2c74add5a911ba64df27458ed8229da804a26
+message.txt.enc  3376c89a19c3b1b38bcdc58587a62e1e6401c119f053d75d855c28edca652afc
+message.txt.dec  d2a84f4b8b650937ec8f73cd8be2c74add5a911ba64df27458ed8229da804a26 (equal:true)
 ```
