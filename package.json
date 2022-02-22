@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bip32": "^2.0.6",
-    "crypto-ld": "^3.7.0",
+    "crypto-ld": "^6.0.0",
     "did-method-key": "^0.7.0",
     "dideryjs": "0.0.37",
     "eckey-utils": "^0.7.13",
