@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bip32": "^2.0.6",
+    "bip32": "^4.0.0",
     "crypto-ld": "^3.7.0",
     "did-method-key": "^0.7.0",
     "dideryjs": "0.0.37",
